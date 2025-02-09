@@ -12,11 +12,11 @@ KaiSecurity is a simple web-based application designed to scan GitHub repositori
 ```
 ├── cmd/
 │   ├── main.go          # Entry point for the application
-|   ├── handler.go       # Handles API requests
-|   ├── handlers_test.go # Unit tests for API requests
+│   ├── handler.go       # Handles API requests
+│   ├── handlers_test.go # Unit tests for API requests
 ├── internal/store
-|    ├── storage.go       # Database operations
-|    ├── storage_test.go  # Unit tests for database operations
+│    ├── storage.go       # Database operations
+│    ├── storage_test.go  # Unit tests for database operations
 ├── Dockerfile       # Docker container setup
 ├── go.mod           # Go module dependencies
 ├── air.toml         # Live reload configuration
