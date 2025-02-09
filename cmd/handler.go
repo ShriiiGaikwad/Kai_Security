@@ -86,7 +86,7 @@ func processJSONFile(filePath string, scanData *[]map[string]interface{}, wg *sy
 	sem <- struct{}{}
 	defer func() { <-sem }()
 	atomic.AddInt32(&concurrentFiles, 1)
-	//log.Printf("Currently processing %d files concurrently", atomic.LoadInt32(&concurrentFiles))
+	//log.Printf("Currently processing %d files ", atomic.LoadInt32(&concurrentFiles))
 
 	fileStart := time.Now()
 	dat, err := os.ReadFile(filePath)
