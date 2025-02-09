@@ -10,17 +10,19 @@ KaiSecurity is a simple web-based application designed to scan GitHub repositori
 
 ## Project Structure
 ```
-├── main.go          # Entry point for the application
-├── handler.go       # Handles API requests
-├── handlers_test.go # Unit tests for handler functions
-├── storage.go       # Database operations
-├── storage_test.go  # Unit tests for database operations
+├── cmd/
+│   ├── main.go          # Entry point for the application
+|   ├── handler.go       # Handles API requests
+|   ├── handlers_test.go # Unit tests for API requests
+├── internal/store
+|    ├── storage.go       # Database operations
+|    ├── storage_test.go  # Unit tests for database operations
 ├── Dockerfile       # Docker container setup
 ├── go.mod           # Go module dependencies
 ├── air.toml         # Live reload configuration
 ├── web/
 │   ├── index.html   # Frontend UI
-│   ├── app.js       # JavaScript logic for API interactionsgit
+│   ├── app.js       # JavaScript logic for API interactions
 │   ├── style.css    # Styling for the UI
 ```
 
