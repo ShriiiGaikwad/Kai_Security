@@ -129,6 +129,31 @@ To run the application in a Docker container, follow these steps:
     },
   ]
   ```
+## Testing Instructions
+### Automated Testing
+The project includes unit tests using Go’s built-in testing framework. To run the tests, execute:
+```sh
+go test ./...
+```
+This will run all available tests and validate the application logic.
+
+### Manual Testing
+To manually test the API endpoints:
+1. Start the application:
+   ```sh
+   go run main.go
+   ```
+2. Use a tool like `curl` or Postman to send requests:
+   - Test scanning:
+     ```sh
+     curl -X POST http://localhost:8080/scan -H "Content-Type: application/json" -d '{"repo": "https://github.com/velancio/vulnerability_scans", "files": ["vulnscan1011.json", "vulnscan1213.json"] }'
+     ```
+   - Test querying vulnerabilities:
+     ```sh
+     curl -X POST http://localhost:8080/query -H "Content-Type: application/json" -d '{"filters": {"severity": "HIGH"}}'
+     ```
+3. Verify responses to ensure expected behavior.
+
 
 ## Running Tests
 To run unit tests for handlers and storage:
