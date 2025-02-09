@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaiSecurity Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>KaiSecurity - API Testing</h1>
+
+    <!-- Scan Repository Form -->
+    <section>
+        <h2>Scan Repository</h2>
+        <input type="text" id="repoUrl" placeholder="Enter GitHub Repo URL">
+        <input type="text" id="repoFiles" placeholder="Enter file names (comma-separated)">
+        <button onclick="scanRepo()">Scan Repo</button>
+        <p id="scanResult"></p>
+    </section>
+
+    <!-- Query Database Form -->
+    <section>
+        <h2>Query Database</h2>
+        <input type="text" id="querySeverity" placeholder="Enter Severity (e.g., HIGH)">
+        <button onclick="queryDatabase()">Submit</button>
+        <pre id="queryResult"></pre>
+    </section>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
